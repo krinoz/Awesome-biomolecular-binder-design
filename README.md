@@ -1099,6 +1099,27 @@ with torch.no_grad():
 </details>
 
 ---
+#### ADiT (All-atom Diffusion Transformer)
+**Description:** Unified latent diffusion model for de novo generation of both small molecules and periodic materials; autoencoder maps all-atom representations to a shared latent space, diffusion generates new molecules that the decoder reconstructs; from Meta FAIR.  
+[![GitHub stars](https://img.shields.io/github/stars/facebookresearch/all-atom-diffusion-transformer.svg?logo=github&label=Stars)](https://github.com/facebookresearch/all-atom-diffusion-transformer) [paper: ICML 2025] [[code](https://github.com/facebookresearch/all-atom-diffusion-transformer)]
+
+<details><summary>Install & Usage</summary>
+
+**Install:**
+```bash
+git clone https://github.com/facebookresearch/all-atom-diffusion-transformer.git
+pip install -e .
+```
+
+**Usage:**
+```python
+# See Colab notebook for generation examples
+# Generates diverse small molecules and materials via latent diffusion
+```
+
+</details>
+
+---
 
 ### 1.3 Binding Site Prediction
 
@@ -1525,27 +1546,6 @@ aizynthcli --smiles "CC(=O)Oc1ccccc1C(=O)O" --config config.yml --output routes.
 
 ---
 
-#### ADiT (All-atom Diffusion Transformer)
-**Description:** Unified latent diffusion model for de novo generation of both small molecules and periodic materials; autoencoder maps all-atom representations to a shared latent space, diffusion generates new molecules that the decoder reconstructs; from Meta FAIR.  
-[![GitHub stars](https://img.shields.io/github/stars/facebookresearch/all-atom-diffusion-transformer.svg?logo=github&label=Stars)](https://github.com/facebookresearch/all-atom-diffusion-transformer) [paper: ICML 2025] [[code](https://github.com/facebookresearch/all-atom-diffusion-transformer)]
-
-<details><summary>Install & Usage</summary>
-
-**Install:**
-```bash
-git clone https://github.com/facebookresearch/all-atom-diffusion-transformer.git
-pip install -e .
-```
-
-**Usage:**
-```python
-# See Colab notebook for generation examples
-# Generates diverse small molecules and materials via latent diffusion
-```
-
-</details>
-
----
 
 ### 1.5 Molecular Optimization
 
