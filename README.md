@@ -25,7 +25,7 @@ This repository aims to be a **one-stop reference** that:
 
 - [ ] **Agentic AI for Biomolecular Discovery** — Add LLM-agent and multi-agent frameworks (e.g., ProtAgents, MD-Agent, ChemGraph) that autonomously orchestrate multi-step design and simulation workflows, combining structure prediction, docking, MD, and optimization into end-to-end agentic pipelines.
 - [ ] **Docker / Container Recipes** — Provide ready-to-use Dockerfiles/Singularity/Apptainer recipes for the most widely-used tools so users can spin up reproducible environments in minutes without wrestling with dependency conflicts.
-- [ ] **A Hitchhiker's Guide to Deep Learning Based Biomolecular Binder Design** — Write a comprehensive tutorial/review covering the end-to-end workflow from binder screening, generation, optimization, and validation, with practical recommendations on which tools to use at each stage.
+- [ ] **A Hitchhiker's Guide to Deep Learning Based Biomolecular Binder Design** — A comprehensive guide covering the end-to-end workflow from binder screening, generation, optimization, and validation, with practical recommendations on which tools to use at each stage.
 
 ---
 
