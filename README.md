@@ -12,12 +12,12 @@ The landscape of AI-driven biomolecular design is evolving at breakneck speed. N
 
 This repository aims to be a **one-stop reference** that:
 
-- **Covers all major binder modalities** — small molecules, peptides & protein binders (RFdiffusion/ProteinMPNN-compatible), nanobodies (VHH), full antibodies (VH/VL), and RNA/DNA aptamers.
+- **Covers all major binder modalities** — small molecules, peptides & protein binders, nanobodies (VHH), full antibodies (VH/VL), and RNA/DNA aptamers.
 - **Spans the full design pipeline** — from target characterization (binding site prediction, structure prediction) through de novo generation, sequence optimization, property prediction (ADMET, stability, affinity), docking, MD simulation, and virtual screening.
 - **Provides actionable information** — each tool entry includes a one-line description, publication reference, GitHub link with star badge, install instructions (pip/conda/Docker), and a minimal usage example.
 - **Is continuously updated** — we actively track new releases and welcome community contributions.
 
-> **268 tools** across **6 sections** · **208 GitHub star badges** · Install & usage for every entry · Last updated: **May 2026**
+> **200+ tools** across **6 sections** · **200+ GitHub star badges** · Install & usage for every entry · Last updated: **May 2026**
 
 ---
 
@@ -30,63 +30,63 @@ This repository aims to be a **one-stop reference** that:
 
 ## Table of Contents
 
-| Section | Subsection | Representative Tool |
-|---------|-----------|-------------------|
+| Section | Subsection | e.g. |
+|---------|-----------|------|
 | **[0. Databases & APIs](#0-databases--apis)** | | |
-| | [0.1 Sequence & Structure Databases](#01-sequence--structure-databases) | UniProt, PDB, AlphaFold DB |
-| | [0.2 Small Molecule Databases](#02-small-molecule-databases) | ChEMBL, PubChem, ZINC20 |
-| | [0.3 Similarity Search Services](#03-similarity-search-services) | FoldSeek, MMseqs2 |
-| | [0.4 Antibody & Nanobody Databases](#04-antibody--nanobody-databases) | SAbDab, OAS, PLAbDab-Nano |
-| | [0.5 RNA Databases](#05-rna-databases) | RNAcentral, Rfam |
-| | [0.6 Target & Binding Site Databases](#06-target--binding-site-databases) | PDBbind, BindingDB |
+| | [0.1 Sequence & Structure Databases](#01-sequence--structure-databases) | UniProt |
+| | [0.2 Small Molecule Databases](#02-small-molecule-databases) | ChEMBL |
+| | [0.3 Similarity Search Services](#03-similarity-search-services) | FoldSeek |
+| | [0.4 Antibody & Nanobody Databases](#04-antibody--nanobody-databases) | SAbDab |
+| | [0.5 RNA Databases](#05-rna-databases) | RNAcentral |
+| | [0.6 Target & Binding Site Databases](#06-target--binding-site-databases) | PDBbind |
 | **[1. Small Molecules](#1-small-molecules)** | | |
-| | [1.1 Molecular Representation / Foundation Models](#11-molecular-representation--foundation-models) | Uni-Mol ⭐ |
+| | [1.1 Molecular Representation / Foundation Models](#11-molecular-representation--foundation-models) | Uni-Mol |
 | | [1.2 Conformer Generation / 3D Structure](#12-conformer-generation--3d-structure) | Torsional Diffusion |
-| | [1.3 Binding Site Prediction](#13-binding-site-prediction) | P2Rank ⭐, PeSTo |
-| | [1.4 De Novo Small Molecule Generation](#14-de-novo-small-molecule-generation) | DiffSBDD, REINVENT4 ⭐ |
-| | [1.5 Molecular Optimization](#15-molecular-optimization) | MOLLEO, STONED |
-| | [1.6 Property Prediction (ADMET)](#16-property-prediction-admet) | ADMET-AI, Chemprop ⭐ |
+| | [1.3 Binding Site Prediction](#13-binding-site-prediction) | P2Rank |
+| | [1.4 De Novo Small Molecule Generation](#14-de-novo-small-molecule-generation) | DiffSBDD |
+| | [1.5 Molecular Optimization](#15-molecular-optimization) | REINVENT4 |
+| | [1.6 Property Prediction (ADMET)](#16-property-prediction-admet) | Chemprop |
 | | [1.7 Similarity Search](#17-similarity-search) | FPSim2 |
-| | [1.8 Molecular Docking](#18-molecular-docking) | DiffDock ⭐, AutoDock-Vina |
-| | [1.8b Protein-Ligand Interaction & Affinity](#18b-protein-ligand-interaction--affinity-prediction) | PSICHIC, DynamicBind |
-| | [1.9 MD Simulation & Free Energy](#19-md-simulation--free-energy) | OpenMM ⭐, GROMACS ⭐ |
-| | [1.10 Virtual Screening](#110-virtual-screening) | DeepChem ⭐, DeepDocking |
+| | [1.8 Molecular Docking](#18-molecular-docking) | DiffDock |
+| | [1.8b Protein-Ligand Interaction & Affinity](#18b-protein-ligand-interaction--affinity-prediction) | PSICHIC |
+| | [1.9 MD Simulation & Free Energy](#19-md-simulation--free-energy) | GROMACS |
+| | [1.10 Virtual Screening](#110-virtual-screening) | DeepChem |
 | **[2. Peptides & Protein Binders](#2-peptides--protein-binders)** | | |
-| | [2.1 Protein Language Models / Sequence Models](#21-protein-language-models--sequence-models) | ESM-2 ⭐, EvoDiff, DPLM-2 |
-| | [2.2 Structure Prediction](#22-structure-prediction) | AlphaFold2/3 ⭐, Boltz-2, Protenix |
-| | [2.2b Conformational Ensembles](#22b-protein-conformational-ensembles) | AlphaFlow, BioEmu |
+| | [2.1 Protein Language Models / Sequence Models](#21-protein-language-models--sequence-models) | ESM-2 |
+| | [2.2 Structure Prediction](#22-structure-prediction) | AlphaFold3 |
+| | [2.2b Conformational Ensembles](#22b-protein-conformational-ensembles) | AlphaFlow |
 | | [2.3 Binding Site / Interface Prediction](#23-binding-site--interface-prediction) | MaSIF |
-| | [2.4 De Novo Binder Design / Generation](#24-de-novo-binder-design--generation) | RFdiffusion ⭐, BindCraft, PXDesign |
-| | [2.5 Sequence Design / Inverse Folding](#25-sequence-design--inverse-folding) | ProteinMPNN ⭐, LigandMPNN |
-| | [2.6 Optimization / Directed Evolution](#26-optimization--directed-evolution) | EvoProtGrad, AlphaMissense ⭐ |
-| | [2.7 Protein-Protein Interaction & Docking](#27-protein-protein-interaction--docking) | HADDOCK3, EquiDock |
-| | [2.8 PPI Binding Affinity & ΔΔG](#28-protein-protein-binding-affinity--mutation-effects-δδg) | GearBind, PPIformer, RDE-PPI |
+| | [2.4 De Novo Binder Design / Generation](#24-de-novo-binder-design--generation) | RFdiffusion |
+| | [2.5 Sequence Design / Inverse Folding](#25-sequence-design--inverse-folding) | ProteinMPNN |
+| | [2.6 Optimization / Directed Evolution](#26-optimization--directed-evolution) | EvoProtGrad |
+| | [2.7 Protein-Protein Interaction & Docking](#27-protein-protein-interaction--docking) | HADDOCK3 |
+| | [2.8 PPI Binding Affinity & ΔΔG](#28-protein-protein-binding-affinity--mutation-effects-δδg) | PPIformer |
 | **[3. Nanobodies](#3-nanobodies)** | | |
-| | [3.1 Sequence Models](#31-sequence-models-for-nanobodies) | AbLang ⭐ |
-| | [3.2 Structure Prediction](#32-nanobody-structure-prediction) | NanoBodyBuilder2, IgFold ⭐ |
-| | [3.3 CDR Numbering & Analysis](#33-cdr-numbering--analysis) | ANARCI, RIOT |
-| | [3.4 De Novo Generation](#34-de-novo-nanobody-generation) | RFantibody, dyMEAN |
+| | [3.1 Sequence Models](#31-sequence-models-for-nanobodies) | AbLang |
+| | [3.2 Structure Prediction](#32-nanobody-structure-prediction) | IgFold |
+| | [3.3 CDR Numbering & Analysis](#33-cdr-numbering--analysis) | ANARCI |
+| | [3.4 De Novo Generation](#34-de-novo-nanobody-generation) | RFantibody |
 | | [3.5 Nanobody-Antigen Docking](#35-nanobody-antigen-docking) | HADDOCK3 |
-| | [3.6 Humanization & Developability](#36-humanization--developability) | BioPhi ⭐ |
+| | [3.6 Humanization & Developability](#36-humanization--developability) | BioPhi |
 | | [3.7 Affinity Optimization](#37-affinity-optimization) | TEMPRO |
 | **[4. Antibodies](#4-antibodies)** | | |
-| | [4.1 Antibody Language Models](#41-antibody-language-models) | IgLM, AntiBERTy |
-| | [4.2 Structure Prediction](#42-antibody-structure-prediction) | ImmuneBuilder ⭐, IgFold |
+| | [4.1 Antibody Language Models](#41-antibody-language-models) | IgLM |
+| | [4.2 Structure Prediction](#42-antibody-structure-prediction) | ImmuneBuilder |
 | | [4.3 CDR Loop Modeling & Numbering](#43-cdr-loop-modeling--numbering) | ABlooper |
-| | [4.4 Epitope / Paratope Prediction](#44-epitope--paratope-prediction) | DiscoTope-3.0, Parapred |
-| | [4.5 De Novo Antibody Generation](#45-de-novo-antibody-generation) | DiffAb, MFDesign, DualGPT-AB |
-| | [4.6 Affinity Maturation & Optimization](#46-affinity-maturation--optimization) | Graphinity, AbMAP |
+| | [4.4 Epitope / Paratope Prediction](#44-epitope--paratope-prediction) | DiscoTope-3.0 |
+| | [4.5 De Novo Antibody Generation](#45-de-novo-antibody-generation) | DiffAb |
+| | [4.6 Affinity Maturation & Optimization](#46-affinity-maturation--optimization) | Graphinity |
 | | [4.7 Humanization & Developability](#47-humanization--developability) | HuDiff |
-| | [4.8 Antibody-Antigen Docking](#48-antibody-antigen-docking) | SnugDock, ABDockGen |
+| | [4.8 Antibody-Antigen Docking](#48-antibody-antigen-docking) | SnugDock |
 | **[5. RNA Aptamers](#5-rna-aptamers)** | | |
-| | [5.1 RNA Language Models](#51-rna-language-models) | RNA-FM ⭐, RiNALMo, Evo2 |
-| | [5.2 RNA Secondary Structure Prediction](#52-rna-secondary-structure-prediction) | ViennaRNA ⭐, RNAformer |
-| | [5.3 RNA 3D Structure Prediction](#53-rna-3d-structure-prediction) | RhoFold+, trRosettaRNA2 |
-| | [5.4 Aptamer-Target Docking](#54-aptamer-target-docking) | HADDOCK3, rDock |
-| | [5.5 In Silico SELEX / Aptamer Selection](#55-in-silico-selex--aptamer-selection) | RaptGen, AptaSUITE |
-| | [5.6 De Novo Aptamer Design & Optimization](#56-de-novo-aptamer-design--optimization) | AptaDiff, RhoDesign, NA-MPNN |
-| | [5.7 Binding Affinity Prediction (RNA-Target)](#57-binding-affinity-prediction-rna-target) | CoPRA, GerNA-Bind |
-| | [5.8 RNA Structure Analysis](#58-rna-structure-analysis-tools) | RNAglib, DSSR |
+| | [5.1 RNA Language Models](#51-rna-language-models) | RNA-FM |
+| | [5.2 RNA Secondary Structure Prediction](#52-rna-secondary-structure-prediction) | ViennaRNA |
+| | [5.3 RNA 3D Structure Prediction](#53-rna-3d-structure-prediction) | RhoFold+ |
+| | [5.4 Aptamer-Target Docking](#54-aptamer-target-docking) | HADDOCK3 |
+| | [5.5 In Silico SELEX / Aptamer Selection](#55-in-silico-selex--aptamer-selection) | RaptGen |
+| | [5.6 De Novo Aptamer Design & Optimization](#56-de-novo-aptamer-design--optimization) | AptaDiff |
+| | [5.7 Binding Affinity Prediction (RNA-Target)](#57-binding-affinity-prediction-rna-target) | CoPRA |
+| | [5.8 RNA Structure Analysis](#58-rna-structure-analysis-tools) | RNAglib |
 | **[Quick Reference Matrix](#quick-reference-tool--pipeline-step-matrix)** | | |
 
 ---
@@ -1520,6 +1520,28 @@ print(finder.routes[0])
 aizynthcli --smiles "CC(=O)Oc1ccccc1C(=O)O" --config config.yml --output routes.json
 ```
 
+
+</details>
+
+---
+
+#### ADiT (All-atom Diffusion Transformer)
+**Description:** Unified latent diffusion model for de novo generation of both small molecules and periodic materials; autoencoder maps all-atom representations to a shared latent space, diffusion generates new molecules that the decoder reconstructs; from Meta FAIR.  
+[![GitHub stars](https://img.shields.io/github/stars/facebookresearch/all-atom-diffusion-transformer.svg?logo=github&label=Stars)](https://github.com/facebookresearch/all-atom-diffusion-transformer) [paper: ICML 2025] [[code](https://github.com/facebookresearch/all-atom-diffusion-transformer)]
+
+<details><summary>Install & Usage</summary>
+
+**Install:**
+```bash
+git clone https://github.com/facebookresearch/all-atom-diffusion-transformer.git
+pip install -e .
+```
+
+**Usage:**
+```python
+# See Colab notebook for generation examples
+# Generates diverse small molecules and materials via latent diffusion
+```
 
 </details>
 
@@ -3473,30 +3495,6 @@ wget --no-check-certificate https://conglab.swmed.edu/humanPPI/downloads/RF2-PPI
 **Usage:**
 ```bash
 python predict_ppi.py --fasta_a protein_a.fasta --fasta_b protein_b.fasta --output results/
-```
-
-
-</details>
-
----
-
-#### ADiT (All-atom Diffusion Transformer)
-**Description:** Unified generative model for both molecules and materials using latent diffusion over all-atom representations; autoencoder maps molecules to shared latent space, diffusion generates new embeddings; from Meta FAIR.  
-[![GitHub stars](https://img.shields.io/github/stars/facebookresearch/all-atom-diffusion-transformer.svg?logo=github&label=Stars)](https://github.com/facebookresearch/all-atom-diffusion-transformer) [paper: ICML 2025] [[code](https://github.com/facebookresearch/all-atom-diffusion-transformer)]
-
-
-<details><summary>Install & Usage</summary>
-
-**Install:**
-```bash
-git clone https://github.com/facebookresearch/all-atom-diffusion-transformer.git
-pip install -e .
-```
-
-**Usage:**
-```python
-# See Colab notebook for generation examples
-# Generates both periodic materials and non-periodic molecular systems
 ```
 
 
