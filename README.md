@@ -1,4 +1,4 @@
-# Awesome Biomolecular Binder Design [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Biomolecular Design [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 <p align="center">
   <img src="image.png" alt="Biomolecular Binder Discovery Overview" width="90%">
